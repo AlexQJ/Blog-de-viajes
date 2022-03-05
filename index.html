@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="theme-color" content="#262270">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>X-Travel</title>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <nav class="primary-menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars icon"></i>
+            </label>
+            <label class="logo">X-Travel</label>
+            <ul class="menu">
+                <li><a href="#main" class="active">Home</a></li>
+                <li><a href="#titulo-destinos">Destinos</a></li>
+                <li><a href="#titulo-ofertas">Ofertas</a></li>
+                <li><a href="#section-mapa">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Cuerpo -->
+    <main>
+        <section class="main" id="main">
+            <section class="hero">
+                <div class="container-hero">
+                    <h1 class="title">Agencia de viajes X-Travel</h1>
+                    <h3 class="slogan">El mundo te espera</h3>
+                </div>
+            </section>
+            <section class="destinos">
+                <h2 id="titulo-destinos" class="section-subtitulo">Destinos</h2>
+                <div class="container-destinos">
+                    <div class="destino">
+                        <div class="img"><img src="./assets/img/fiesta.jpg"alt=""></div>
+                        <div class="text">
+                            <h3>De fiesta</h3>
+                            <p>Visita las ciudades que mejor saben divertirse</p>
+                        </div>
+                        <button><i class="fa-solid fa-calendar-days"></i>Reservar fecha</button>
+                    </div>
+    
+                    <div class="destino">
+                        <div class="img"><img src="./assets/img/tour.jpg"alt=""></div>
+                        <div class="text">
+                            <h3>Tours</h3>
+                            <p>Disfruta hoy las mejores experiencias al aire libre</p>
+                        </div>
+                        <button><i class="fa-solid fa-calendar-days"></i>Reservar fecha</button>
+                    </div>
+    
+                    <div class="destino">
+                        <div class="img"><img src="./assets/img/playa.jpg" alt=""></div>
+                        <div class="text">
+                            <h3>Playas</h3>
+                            <p>Relajate junto al mar con el sonido de las olas</p>
+                        </div>
+                        <button><i class="fa-solid fa-calendar-days"></i>Reservar fecha</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-container dark ofertas">
+                <h2 id="titulo-ofertas" class="section-titulo">Ofertas</h2>
+                <div class="container-ofertas">
+                    <div class="oferta">
+                        <div class="img"><img src="https://picsum.photos/700?random=17"alt="Imagen aleatoria"></div>
+                        <div class="text">
+                            <h3>Vuelo + Hotel</h3>
+                            <p>No te lo puedes perder</p>
+                        </div>
+                        <button><i class="fa-solid fa-cart-shopping"></i>Apartar lugar</button>
+                    </div>
+    
+                    <div class="oferta">
+                        <div class="img"><img src="https://picsum.photos/700/700?random=18"alt="Imagen aleatoria"></div>
+                        <div class="text">
+                            <h3>Vuelo + Experiencias</h3>
+                            <p>No te lo puedes perder</p>
+                        </div>
+                        <button><i class="fa-solid fa-cart-shopping"></i>Apartar lugar</button>
+                    </div>
+    
+                    <div class="oferta">
+                        <div class="img"><img src="https://picsum.photos/700?random=19"alt="Imagen aleatoria"></div>
+                        <div class="text">
+                            <h3>Viajes en grupos</h3>
+                            <p>No te lo puedes perder</p>
+                        </div>
+                        <button><i class="fa-solid fa-cart-shopping"></i>Apartar lugar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-container" id="section-mapa">
+                <h2 id="ubicacion" class="section-titulo dark">Ubicación</h2>
+                <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119468.29767283236!2d-87.14173741829948!3d20.653938455811726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e4323d22d4e61%3A0xe8c10b783bab4adc!2sPlaya%20del%20Carmen%2C%20Q.R.!5e0!3m2!1ses-419!2smx!4v1645765838849!5m2!1ses-419!2smx" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            </section>
+
+            
+            <section class="section-container dark">
+                <h2 id="contacto" class="section-titulo">Contacto</h2>
+                <form action="" class="formulario">
+
+                    <div class="izquierdo">
+                        <label for="nombre" class="input-titulo">Nombre</label><input type="text" name="nombre" required class="input" id="nombre" placeholder="Juan Pérez">
+                        <label for="nombre" class="input-titulo">Correo</label><input type="email" name="correo" required class="input" id="correo" placeholder="correo@correo.com">
+                        <label for="telefono" class="input-titulo">Telefono</label><input type="number" name="telefono" required class="input" id="telefono" placeholder="555-5555-555">
+                        <input type="submit" value="Contactar">
+                    </div>
+
+                    <div class="derecho">
+                        <img src="./assets/img/contacto.png" alt="rand">
+                    </div>
+
+                </form>
+                </div>
+            </section>            
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <nav class="menu-footer">
+                <ul>
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#titulo-destinos">Destinos</a></li>
+                    <li><a href="#titulo-ofertas">Ofertas</a></li>
+                    <li><a href="#section-mapa">Ubicación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="copy">Todos los derechos reservados &copy; | Creado por Alejandro Quiñónez Jurado</p>
+    </footer>
+</body>
+</html>

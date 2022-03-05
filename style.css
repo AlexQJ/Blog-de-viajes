@@ -1,0 +1,593 @@
+:root {
+    --primary-color: #020024;
+    --primary-background: linear-gradient(124deg, rgba(2,0,36,1) 72%, rgba(7,7,113,1) 100%);
+    --white:#fff;
+    --resaltado: #005bd3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+::selection {
+    color: var(--white);
+    background: var(--resaltado);
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* logo y menu */
+    nav.primary-menu {
+        position: relative;
+        background:var(--primary-color);
+        background:var(--primary-background);
+        height: 90px;
+        width: 100%;
+        overflow: hidden;
+}
+    label.logo {
+        font-size: 3rem;
+        padding-left:100px;
+        font-weight: bold;
+        color: var(--white);
+        line-height: 90px;
+        float:left;
+        cursor:pointer;
+    }
+    label.logo:hover {
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        transition:all ease .3s;
+        -webkit-transition:all ease .3s;
+        -moz-transition:all ease .3s;
+        -ms-transition:all ease .3s;
+        -o-transition:all ease .3s;
+    }
+    nav ul {
+        float: right;
+        margin-right: 20px;
+    }
+
+    nav ul li {
+        display: inline-block;
+        line-height: 90px;
+    }
+
+    nav ul li a {
+        color: var(--white);
+        font-weight: 500;
+        font-size: 1.025rem;
+        text-transform: uppercase;
+        padding: 7px 13px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        transition: ease .3s;
+        -webkit-transition: ease .3s;
+        -moz-transition: ease .3s;
+        -ms-transition: ease .3s;
+        -o-transition: ease .3s;
+    }
+
+    a.active, a:hover {
+        background-color:var(--resaltado);
+    }
+
+    .checkbtn {
+        font-size: 3rem;
+        color: var(--white);
+        float: right;
+        line-height:90px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+
+    #check{
+        display: none;
+}
+
+/* Hero */
+
+.container-hero {
+    width: 100%;
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, .6) 100%),
+        url('./assets/img/5.jpg');
+    font-size: 16px;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 88vh;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.container-hero h1 {
+    font-size: 3.125em;
+    padding-bottom: 0.3125em;
+    margin-bottom: 0.3125em;
+    border-bottom: 3px solid var(--white);
+}
+
+.container-hero h3 {
+    font-size: 1.87em;
+}
+
+
+/* Destinos */
+section {
+    margin-bottom: 30px;
+    position: relative;
+}
+section.destinos::before,
+.section-container.dark::before,
+#section-mapa::before{
+    content: "";
+    background: url('https://cdn-icons-png.flaticon.com/512/4094/4094782.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.07;
+    z-index: -1;
+}
+section.destinos h3 {
+    color: var(--primary-color) ;
+}
+
+.section-subtitulo {
+    color: var(--primary-color);
+    font-size: 3em;
+    width: 50%;
+    border-bottom: 3px solid var(--primary-color);
+    margin: 20px 0 20px 36px;
+}
+.container-destinos,
+.container-ofertas {
+    display: flex;
+    font-size: 16px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-destinos h2,
+.container-ofertas h2 {
+    display: block;
+}
+
+.container-destinos .destino {
+    background:#fff;
+    width: 28%;
+    height:auto;
+    overflow: hidden;
+    margin: 20px auto;
+    box-shadow: 3px 3px 7px 0px #8C8C8C;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-shadow: 3px 3px 7px 0px #8C8C8C;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    
+}
+
+.container-ofertas .oferta {
+    background:#fff;
+    width: 28%;
+    height:auto;
+    overflow: hidden;
+    margin: 20px auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.container-destinos .destino:hover,
+.section-container .container-ofertas .oferta:hover {
+    border: 2px solid var(--resaltado);
+    transform: scale(1.008);
+    -webkit-transform: scale(1.008);
+    -moz-transform: scale(1.008);
+    -ms-transform: scale(1.008);
+    -o-transform: scale(1.008);
+    transform-origin: center;
+    transition:.1s ease all;
+    -webkit-transition:.1s ease all;
+    -moz-transition:.1s ease all;
+    -ms-transition:.1s ease all;
+    -o-transition:.1s ease all;
+}
+
+.container-destinos .destino .text,
+.container-ofertas .oferta .text {
+    min-height: 100px;
+    max-height: 130px;
+    font-size: 16px;
+}
+
+.container-destinos .destino img,
+.container-ofertas .oferta img {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -ms-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+
+.container-destinos .destino .text h3,
+.container-ofertas .oferta .text h3{
+    font-size: 1.875em;
+    margin-left: 18px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.container-destinos .destino .text p,
+.container-ofertas .oferta .text p {
+    margin-left: 18px;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.container-destinos .destino button,
+.container-ofertas .oferta button {
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px;
+    background: var(--resaltado);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+button i {
+    margin-right: 10px;
+}
+
+/* Ofertas */
+
+.section-container.dark {
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+    padding-bottom: 50px;
+    background-color:var(--primary-color);
+}
+
+.section-container .section-titulo.dark {
+    color: var(--primary-color);
+    font-size: 3em;
+    width: 50%;
+    border-bottom: 3px solid var(--primary-color);
+    margin: 20px 0 20px 36px;
+}
+
+.section-container .section-titulo {
+    color: var(--white);
+    font-size: 3em;
+    width: 50%;
+    border-bottom: 3px solid var(--white);
+    margin: 20px 0 20px 36px;
+}
+
+.section-container .dark .ofertas .section-titulo{
+    color: var(--white);
+}
+/* --- --- --- MAPA --- --- --- */
+#section-mapa {
+    position: relative;
+}
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa iframe{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* --- --- --- CONTACTO --- --- --- */
+
+.formulario {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.izquierdo,
+.derecho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario .izquierdo {
+    color: var(--white);
+    font-size: 22px;
+}
+
+.formulario .input,
+.formulario input[type="submit"] {
+    margin: 10px 0;
+    width:500px;
+    overflow: hidden;
+    height: 40px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.formulario input[type="submit"] {
+    margin: 20px 0;
+    cursor: pointer;
+    background-color: var(--resaltado);
+    color: white;
+    opacity: .85;
+}
+
+.formulario input[type="submit"]:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    opacity: 1;
+}
+
+.input:active,
+.input:focus {
+    outline: 2px solid var(--resaltado);
+}
+
+.formulario .derecho img{
+    width: 300px;
+}
+
+
+
+/* --- --- --- GALERIA --- --- --- */
+
+.contenedor-galeria {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.contenedor-galeria .img {
+    width: 25%;
+    filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.contenedor-galeria .img:hover {
+    filter: grayscale(0%);
+    border: 1px solid var(--primary-color);
+    -webkit-filter: grayscale(0%);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    z-index: 10;
+   
+}
+
+
+/* --- --- --- FOOTER --- --- --- */
+
+footer {
+    background-color: #000;
+    margin-top: -31px;
+    height: 150px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer .menu-footer {
+   display: block;
+}
+
+
+footer .copy {
+    display: block;
+    font-size: 12px;
+}
+
+
+/* Media Queries */
+
+
+@media (max-width: 952px){
+
+    label.logo {
+        font-size: 2em;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 858px){
+
+/* Menu */
+    .checkbtn {
+        display: block;
+    }
+
+    .checkbtn {
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+        right: -15;
+        background-color: var(--primary-color);
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+}
+    .icon:hover {
+        filter: brightness(.75);
+        -webkit-filter: brightness(.75);
+}
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        background:var(--primary-background);
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        z-index: 10;
+    }
+    nav.primary-menu {
+        background:var(--primary-color);
+    }
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    a:hover, a.active {
+        background: none;
+        color: var(--resaltado);
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+        top: 80px;
+        z-index:10;
+    }
+
+    /* Hero */
+    .container-hero {
+        font-size: 13px;
+    }
+    .container-hero h1,
+    .container-hero h3 {
+        margin: 10px 20px;
+    }
+
+    /* Destinos y Ofertas */
+    section.destinos h2,
+    .section-container.dark h2,
+    #ubicacion { 
+        margin: 20px auto;
+        width: 80%;
+        text-align: center;
+    }
+    .container-destinos,
+    .container-ofertas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-destinos .destino,
+    .container-ofertas .oferta {
+        width: 80%;
+    }
+
+    /* Formulario */
+
+    .formulario {
+        width: 100%;
+    }
+    .formulario .derecho {
+        display: none;
+    }
+
+    .formulario .input,
+    .formulario input[type="submit"] {
+        width: 400px;
+    }
+
+    footer {
+        height: 80px;
+    }
+    footer .copy {
+        font-size: 10px;
+    }
+
+}
